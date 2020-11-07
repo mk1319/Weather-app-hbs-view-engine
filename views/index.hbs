@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+  <body>
+      <style>
+          tr,td,table{
+              border: 1px solid black;
+              
+          }
+      </style>
+    <table>
+        {{#objects}}
+        <tr>
+            <td>City</td>
+            <td> {{name}}</td>
+        </tr>
+        <tr>
+            <td>Weather</td>
+            <td>{{#weather}}{{main}}{{/weather}}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{#weather}}{{description}}{{/weather}}</td>
+        </tr>
+        <tr>
+            <td>Current Temperature</td>
+            <td>{{#main}}{{temp}}{{/main}}</td>
+        </tr>
+        <tr>
+            <td>Maximum Temperature</td>
+            <td>{{#main}}{{temp_max}}{{/main}}</td>
+        </tr>
+        <tr>
+            <td>Minimum Temperate</td>
+            <td>{{#main}}{{temp_min}}{{/main}}</td>
+        </tr>
+        <tr>
+            <td>Pressure</td>
+            <td>{{#main}}{{pressure}}{{/main}}</td>
+        </tr>
+        <tr>
+            <td>Humidity</td>
+            <td>{{#main}}{{humidity}}{{/main}}</td>
+        </tr>
+        <tr>
+            <td>Visibility</td>
+            <td>{{visibility}}</td>
+        </tr>
+        {{/objects}}
+    </table>
+  </body>
+</html>
